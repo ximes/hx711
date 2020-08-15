@@ -3,6 +3,7 @@
 
 */
 
+#define _DEFAULT_SOURCE
 
 #include <stdio.h>
 #include "gb_common.h"
@@ -18,6 +19,7 @@
 #define SCK_ON  (GPIO_SET0 = (1 << CLOCK_PIN))
 #define SCK_OFF (GPIO_CLR0 = (1 << CLOCK_PIN))
 #define DT_R    (GPIO_IN0  & (1 << DATA_PIN))
+
 
 void           reset_converter(void);
 unsigned long  read_cnt(long offset, int argc);
